@@ -30,4 +30,9 @@ class Song extends Model
     public function likedBy() {
         return $this->belongsToMany(User::class, 'likes');
     }
+
+    public function getRouteKeyName()
+    {
+        return 'name';
+    }
 }
