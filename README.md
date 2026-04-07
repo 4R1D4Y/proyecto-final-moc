@@ -31,7 +31,7 @@ No es necesario instalar Laravel globalmente; se descargará localmente con Comp
     ```
 2.  **Configurar la Base de Datos y APP_KEY:**
     Edita el archivo `.env` con tus credenciales de MySQL (
-        DB_DATABASE = creo_web, 
+        DB_DATABASE = web_creo, 
         DB_USERNAME = 'tu_usuario', 
         DB_PASSWORD = 'tu_contraseña'
         ).
