@@ -25,6 +25,11 @@ Sigue estos pasos en orden para levantar el entorno local:
 ### 1. Configuración del Backend (Laravel)
 No es necesario instalar Laravel globalmente; se descargará localmente con Composer.
 
+Entrar en el backend:
+```bash
+cd backend-creo
+```
+
 1. **Instalar dependencias de PHP:**
    ```bash
    composer install
@@ -57,6 +62,10 @@ No es necesario instalar Laravel globalmente; se descargará localmente con Comp
     ```
 
 ### 2. Configuración del Frontend (React)
+Entrar en el frontend:
+```bash
+cd frontend-creo
+```
 
 1.  **Instalar dependencias de JavaScript:**
     ```bash
