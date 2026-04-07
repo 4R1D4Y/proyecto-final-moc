@@ -14,6 +14,8 @@ Asegúrate de tener instalados los siguientes componentes antes de comenzar:
 - **Node.js** & **npm** (para el frontend en React)
 - **MySQL** o MariaDB
 
+*PHP y MySQL/MarioDB puedes tenerlos con XAMPP*
+
 ---
 
 ## 🔧 Instalación y Configuración
