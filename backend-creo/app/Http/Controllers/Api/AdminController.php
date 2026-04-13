@@ -22,8 +22,8 @@ class AdminController extends Controller
     public function storeSong(Request $request) {
         $validated = $request->validate([
             'name' => 'required|string|max:255',
-            'audio' => 'required|file|mimes:mp3,wav|max:20000',
-            'cover' => 'required|image|max:5000',
+            'audio_path' => 'required|file|mimes:mp3,wav|max:20000',
+            'cover_path' => 'required|image|max:5000',
             'type' => 'required|in:single,ep,album',
             'release_date' => 'required|date',
             'duration' => 'required|integer',
@@ -49,8 +49,8 @@ class AdminController extends Controller
             'type' => 'required|in:single,ep,album',
             'release_date' => 'required|date',
             'duration' => 'required|integer',
-            'audio' => 'nullable|file|mimes:mp3,wav',
-            'cover' => 'nullable|image',
+            'audio_path' => 'nullable|file|mimes:mp3,wav',
+            'cover_path' => 'nullable|image',
             'collection_name' => 'nullable|string',
             'collection_order' => 'nullable|integer',
         ]);

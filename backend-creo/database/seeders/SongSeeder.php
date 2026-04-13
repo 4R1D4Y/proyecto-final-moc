@@ -138,7 +138,7 @@ class SongSeeder extends Seeder
             ['name' => 'Red Haze', 'duration' => 200, 'date' => '2019-09-26', 'type' => 'single'],
             
             // SINGLE: NEVER MAKE IT
-            ['name' => 'Naver Make It', 'duration' => 234, 'date' => '2019-10-24', 'type' => 'single'],
+            ['name' => 'Never Make It', 'duration' => 234, 'date' => '2019-10-24', 'type' => 'single'],
             
             // SINGLE: SHINE
             ['name' => 'Shine', 'duration' => 198, 'date' => '2019-11-07', 'type' => 'single'],

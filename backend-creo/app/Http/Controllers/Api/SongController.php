@@ -26,8 +26,8 @@ class SongController extends Controller
             return [
                 'id' => $song->id,
                 'name' => $song->name,
-                'audio' => asset('storage/' . $song->audio_path),
-                'cover' => asset('storage/' . $song->cover_path),
+                'audio_path' => asset('storage/' . $song->audio_path),
+                'cover_path' => asset('storage/' . $song->cover_path),
                 'duration' => $song->duration, // Útil para el reproductor en React
                 'reproductions' => $song->reproductions,
                 'release_date' => $song->release_date,
@@ -48,8 +48,8 @@ class SongController extends Controller
         return response()->json([
             'id' => $song->id,
             'name' => $song->name,
-            'audio' => asset('storage/' . $song->audio_path),
-            'cover' => asset('storage/' . $song->cover_path),
+            'audio_path' => asset('storage/' . $song->audio_path),
+            'cover_path' => asset('storage/' . $song->cover_path),
             'duration' => $song->duration,
             'reproductions' => $song->reproductions,
             'release_date' => $song->release_date,
