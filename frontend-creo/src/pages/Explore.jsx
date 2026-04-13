@@ -26,7 +26,7 @@ const Explore = () => {
   if (loading) return <div style={{ padding: '20px' }}>Cargando biblioteca...</div>;
 
   return (
-    <div style={{ padding: '20px' }}>
+    <div style={{ padding: '20px', paddingBottom: '80px' }}>
       <h2>Explorar Música</h2>
       <div style={gridStyle}>
         {songs.map(song => (

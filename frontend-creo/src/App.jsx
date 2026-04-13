@@ -3,12 +3,15 @@ import Home from './pages/Home';
 import Explore from './pages/Explore';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
+import Legal from './pages/Legal';
+import Footer from './components/Footer';
 import { useAuth } from './context/AuthContext';
 
 function App() {
   const { user } = useAuth();
 
   return (
+    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
     <Router>
       {/* Mini Navbar para navegar mientras desarrollamos */}
       <nav style={{ padding: '10px', background: '#222', color: 'white', display: 'flex', gap: '15px' }}>
@@ -21,13 +24,19 @@ function App() {
         )}
       </nav>
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/explore" element={<Explore />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-      </Routes>
+      <main style={{ flex: 1 }}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/explore" element={<Explore />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/legal" element={<Legal />} />
+        </Routes>
+      </main>
+
+      <Footer />
     </Router>
+    </div>
   );
 }
 
