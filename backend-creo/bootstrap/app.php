@@ -19,6 +19,11 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware-> web(append: [
             AddLinkHeadersForPreloadedAssets::class,
         ]);
+
+        $middleware->validateCsrfTokens(except: [
+            'api/login',
+            'api/register'
+        ]);
     })
 
     ->withExceptions(function (Exceptions $exceptions) {
