@@ -36,9 +36,14 @@ export const AuthProvider = ({ children }) => {
     const logout = async () => {
         try {
             await api.post('/logout');
+        } catch (error) {
+            // Si el servidor falla (ej. error 419), ignoramos el error 
+            // y seguimos con la limpieza local
+            console.warn("Sesión ya expirada en el servidor");
         } finally {
             localStorage.removeItem('AUTH_TOKEN');
             setUser(null);
+            // Al estar en el 'finally', esto se ejecuta SIEMPRE
         }
     };
 

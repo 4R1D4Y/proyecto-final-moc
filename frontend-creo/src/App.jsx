@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './pages/Home';
 import Explore from './pages/Explore';
 import Login from './pages/Login';
+import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
 import Legal from './pages/Legal';
 import Footer from './components/Footer';
@@ -18,7 +19,10 @@ function App() {
         <Link to="/" style={{ color: 'white' }}>Home</Link>
         <Link to="/explore" style={{ color: 'white' }}>Explore</Link>
         {!user ? (
+          <>
           <Link to="/login" style={{ color: 'white' }}>Login</Link>
+          <Link to="/register" style={{ color: 'white' }}>Register</Link>
+          </>
         ) : (
           <Link to="/dashboard" style={{ color: 'white' }}>Mi Perfil</Link>
         )}
@@ -30,6 +34,7 @@ function App() {
           <Route path="/explore" element={<Explore />} />
           <Route path="/login" element={<Login />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/register" element={<Register />} />
           <Route path="/legal" element={<Legal />} />
         </Routes>
       </main>
